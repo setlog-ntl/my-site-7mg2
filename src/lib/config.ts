@@ -40,7 +40,7 @@ const DEMO_SKILLS: SkillItem[] = [
   { name: 'Python', level: 'intermediate' },
   { name: 'Docker', level: 'intermediate' },
   { name: 'PostgreSQL', level: 'intermediate' },
-  { name: 'AWS', level: 'beginner' },
+  { name: 'AWS', level: 'beginner' }
 ];
 
 const DEMO_EXPERIENCE: ExperienceItem[] = [
@@ -73,7 +73,7 @@ const DEMO_EXPERIENCE: ExperienceItem[] = [
     periodEn: '2019 - 2023',
     description: '컴퓨터공학 학사. 졸업 프로젝트: AI 기반 코드 리뷰 도구 개발.',
     descriptionEn: 'B.S. in Computer Science. Capstone: AI-powered code review tool.',
-  },
+  }
 ];
 
 const DEMO_PROJECTS: ProjectItem[] = [
@@ -143,8 +143,8 @@ function parseJSON<T>(raw: string | undefined, fallback: T): T {
 }
 
 export const siteConfig = {
-  name: process.env.NEXT_PUBLIC_SITE_NAME || '김개발',
-  nameEn: process.env.NEXT_PUBLIC_SITE_NAME_EN || 'Gaebal Kim',
+  name: process.env.NEXT_PUBLIC_SITE_NAME || '조코딩',
+  nameEn: process.env.NEXT_PUBLIC_SITE_NAME_EN || 'Jocording',
   githubUsername: process.env.NEXT_PUBLIC_GITHUB_USERNAME || null,
   tagline: process.env.NEXT_PUBLIC_TAGLINE || '풀스택 개발자 | 오픈소스 기여자',
   taglineEn: process.env.NEXT_PUBLIC_TAGLINE_EN || 'Full-Stack Developer | Open Source Contributor',
@@ -153,15 +153,18 @@ export const siteConfig = {
     '안녕하세요! 웹 기술에 열정을 가진 풀스택 개발자입니다. React와 Next.js를 주로 사용하며, 오픈소스 프로젝트에 기여하는 것을 좋아합니다. 사용자 경험을 개선하고 깔끔한 코드를 작성하는 데 집중합니다.',
   aboutEn:
     process.env.NEXT_PUBLIC_ABOUT_EN ||
-    "Hi! I'm a full-stack developer passionate about web technologies. I primarily work with React and Next.js, and love contributing to open source projects. I focus on improving user experience and writing clean code.",
+    'Hi! I\'m a full-stack developer passionate about web technologies. I primarily work with React and Next.js, and love contributing to open source projects. I focus on improving user experience and writing clean code.',
   skills: parseJSON<SkillItem[]>(process.env.NEXT_PUBLIC_SKILLS, DEMO_SKILLS),
   experience: parseJSON<ExperienceItem[]>(process.env.NEXT_PUBLIC_EXPERIENCE, DEMO_EXPERIENCE),
   projects: DEMO_PROJECTS,
   blogPosts: parseJSON<BlogPost[] | null>(process.env.NEXT_PUBLIC_BLOG_POSTS, null),
   resumeUrl: process.env.NEXT_PUBLIC_RESUME_URL || null,
-  email: process.env.NEXT_PUBLIC_EMAIL || null,
+  email: process.env.NEXT_PUBLIC_EMAIL || 'dev@example.com',
+  githubUrl: process.env.NEXT_PUBLIC_GITHUB_URL || null,
   linkedinUrl: process.env.NEXT_PUBLIC_LINKEDIN_URL || null,
-  typingWords: null,
+  typingWords: 'Full-stack Developer
+Open Source Contributor
+TypeScript Enthusiast',
   maxRepos: 6,
   designPreset: 'github-dark',
   gaId: process.env.NEXT_PUBLIC_GA_ID || null,
