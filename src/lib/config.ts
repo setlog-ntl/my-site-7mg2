@@ -143,7 +143,7 @@ function parseJSON<T>(raw: string | undefined, fallback: T): T {
 }
 
 export const siteConfig = {
-  name: process.env.NEXT_PUBLIC_SITE_NAME || '조코딩',
+  name: process.env.NEXT_PUBLIC_SITE_NAME || '조코딩3',
   nameEn: process.env.NEXT_PUBLIC_SITE_NAME_EN || 'Jocording',
   githubUsername: process.env.NEXT_PUBLIC_GITHUB_USERNAME || null,
   tagline: process.env.NEXT_PUBLIC_TAGLINE || '풀스택 개발자 | 오픈소스 기여자',
